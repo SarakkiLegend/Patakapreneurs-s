@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patakapreneurs – Crackers delivered to your hostel</title>
+  <meta name="description" content="Order crackers direct from Sivakasi at student-friendly prices. Delivered to your hostel. Pay by UPI.">
+  <meta property="og:title" content="Patakapreneurs – Diwali crackers for your hostel">
+  <meta property="og:description" content="Direct from Sivakasi, student-friendly prices, delivered to your hostel. 30%–60% off!">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎆%3C/text%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top bar -->
+  <nav class="topbar" aria-label="Site information">
+    <button type="button" data-open="modal-about">About</button>
+    <button type="button" data-open="modal-contact">Contact Us</button>
+    <button type="button" data-open="modal-terms">Terms &amp; Conditions</button>
+  </nav>
+
+  <header class="hero">
+    <h1>🎆 Patakapreneurs</h1>
+    <p>Delivered to your hostel · Pay by UPI · Order Easy</p>
+    <div class="ticker" aria-label="Offers">
+      <div class="ticker-track">🎉 Enjoy 30%–60% off on all crackers! &nbsp;·&nbsp; 🎆 Delivered to your hostel &nbsp;·&nbsp; Pay by UPI 🎉</div>
+    </div>
+  </header>
+
+  <main id="products" aria-live="polite"></main>
+
+  <!-- Bottom cart bar -->
+  <div id="cart-bar">
+    <div class="cart-total">
+      <div class="cart-label">Total <span id="savings-note" class="save-note"></span></div>
+      <div class="cart-amount"><s id="mrp-total" class="mrp-strike hidden"></s> <strong>₹<span id="total">0</span></strong></div>
+    </div>
+    <div class="cart-actions">
+      <button type="button" class="btn-clear hidden" id="clear-btn">Clear all</button>
+      <button type="button" class="btn-checkout" id="checkout-btn">Checkout 🛒</button>
+    </div>
+  </div>
+
+  <!-- About (leave blank for now: add your text inside .modal-body) -->
+  <div id="modal-about" class="modal hidden info-modal" role="dialog" aria-modal="true" aria-labelledby="about-title">
+    <div class="modal-box">
+      <button type="button" class="close" data-close aria-label="Close">✕</button>
+      <h2 id="about-title">About Us</h2>
+      <div class="modal-body terms">
+        <p>We’re a group of students with a simple idea: bring authentic Tamil Nadu crackers straight to your celebrations, without the middlemen.</p>
+        <p>We source our crackers directly from Sivakasi, India’s firecracker capital, so you get fresh stock at fair prices.</p>
+        <p>Being students ourselves, we know how much a budget matters, so we keep our prices honest and transparent.</p>
+        <p>Every festival should feel special, whether it’s Diwali or a night with friends. We’re here to help you light it up.</p>
+        <p class="tagline">Celebrate big. Celebrate safe. 🎆</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Us -->
+  <div id="modal-contact" class="modal hidden info-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+    <div class="modal-box">
+      <button type="button" class="close" data-close aria-label="Close">✕</button>
+      <h2 id="contact-title">Contact Us</h2>
+      <ul class="contact-list">
+        <li><span>Vinish</span><a href="tel:+919025200579">+91 90252 00579</a></li>
+        <li><span>Varan</span><a href="tel:+919652713674">+91 96527 13674</a></li>
+        <li><span>Samarth</span><a href="tel:+919740511988">+91 97405 11988</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Terms and Conditions -->
+  <div id="modal-terms" class="modal hidden info-modal" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+    <div class="modal-box">
+      <button type="button" class="close" data-close aria-label="Close">✕</button>
+      <h2 id="terms-title">Terms and Conditions</h2>
+      <div class="modal-body terms">
+        <p class="muted">Last updated: 26 October 2026</p>
+        <p>Welcome to Patakapreneurs. By accessing this website, placing an order, or purchasing products through our platform, you agree to the following Terms and Conditions. Please read them carefully before proceeding with your purchase.</p>
+        <h3>1. Eligibility to Purchase</h3>
+        <ul><li>Purchases are permitted only for individuals who meet the applicable legal age requirements and all other eligibility conditions under Indian law.</li><li>Customers must provide accurate and complete information while placing an order.</li><li>We reserve the right to refuse or cancel orders that do not comply with applicable laws or our sales policies.</li></ul>
+        <h3>2. Product Information and Availability</h3>
+        <ul><li>Product descriptions, images, prices, quantities and specifications are provided for customer reference.</li><li>Actual product appearance, packaging and performance may vary slightly from the displayed information.</li><li>All products are subject to availability. We reserve the right to discontinue products or correct listing errors where necessary.</li><li>Firecrackers will be sold only where their sale and use are permitted under applicable laws, licences and local restrictions.</li></ul>
+        <h3>3. Orders and Confirmation</h3>
+        <ul><li>An order submitted through the website constitutes a purchase request and is subject to confirmation by the seller.</li><li>An order is considered confirmed only after the applicable confirmation process is completed.</li><li>We reserve the right to reject, cancel or limit an order due to stock unavailability, pricing errors, suspected misuse or legal and regulatory restrictions.</li><li>Customers will be informed of any cancellation or material change to an accepted order.</li></ul>
+        <h3>4. Pricing and Payment</h3>
+        <ul><li>All prices are displayed in Indian Rupees (INR).</li><li>Applicable taxes, delivery charges and other fees, if any, will be disclosed before payment.</li><li>Customers must use the payment methods made available on the website.</li><li>Orders may be withheld or cancelled if payment is unsuccessful, reversed or suspected to be fraudulent.</li></ul>
+        <h3>5. Delivery and Collection</h3>
+        <ul><li>Delivery or collection arrangements, including the applicable date, time and location, will be communicated during the ordering process.</li><li>Customers must provide accurate contact and collection details and follow the instructions provided by the seller.</li><li>Delivery or collection is subject to product availability, operational limitations and applicable legal restrictions.</li><li>We are not responsible for delays caused by circumstances beyond our reasonable control. Any changes to confirmed arrangements will be communicated where reasonably possible.</li></ul>
+        <h3>6. Cancellations, Returns and Refunds</h3>
+        <ul><li>Cancellation requests must be submitted through the contact method specified on the website.</li><li>Cancellation eligibility will depend on the order status and the applicable law.</li><li>Due to the hazardous and regulated nature of fireworks, opened, used, damaged (through customer handling) or improperly stored products may not be eligible for return, except where a remedy is required by law.</li><li>Customers must contact us promptly regarding incorrect, missing or defective products.</li><li>Approved refunds will be processed through the original payment method or another legally permissible method within the applicable timeframe.</li><li>Nothing in this section limits any consumer rights available under applicable law.</li></ul>
+        <h3>7. Firecracker Safety</h3>
+        <ul><li>Firecrackers must be handled, stored, transported and used strictly in accordance with the manufacturer&#x27;s instructions and applicable safety requirements.</li><li>Customers must follow all applicable restrictions relating to permitted products, noise levels, timings, locations and environmental conditions.</li><li>Firecrackers must never be used near flammable materials, fuel, vehicles, buildings, crowds or other hazardous locations.</li><li>Customers must not modify, dismantle, relight or tamper with firecrackers. Misfired products must not be handled or relit.</li><li>Appropriate adult supervision and protective measures must be maintained wherever required by law or the manufacturer&#x27;s instructions.</li><li>The seller does not authorise or encourage unsafe, unlawful or unauthorised use of any product.</li></ul>
+        <h3>8. College and Campus Rules</h3>
+        <ul><li>Where sales or use take place in a college or institutional campus, customers must comply with all rules issued by the college administration and the relevant authorities.</li><li>Firecrackers may be used only in locations expressly authorised by the college, and only if the specific product and activity are permitted.</li><li>Rockets, ground chakkars and any other prohibited products or activities must not be brought onto or used within the campus where restricted by the college.</li><li>Permission to purchase a product does not constitute permission to burst it on campus.</li><li>The college or authorised event organisers may suspend or prohibit fireworks activities at any time for safety, weather, operational or regulatory reasons.</li></ul>
+        <h3>9. Customer Responsibility</h3>
+        <ul><li>Customers are responsible for following applicable laws, safety instructions and campus rules.</li><li>Customers must not resell, misuse or use purchased products for unlawful purposes.</li><li>Customers must stop use immediately if instructed by authorised personnel or if conditions become unsafe.</li><li>To the extent permitted by law, customers are responsible for losses arising from their unlawful or negligent handling or use of products.</li></ul>
+        <h3>10. Limitation of Liability</h3>
+        <ul><li>Products must be used only for their intended purpose and in accordance with all instructions and legal requirements.</li><li>Nothing in these Terms excludes or limits liability where such exclusion or limitation is prohibited under applicable law, including liability for fraud, wilful misconduct or legally protected consumer rights.</li><li>The seller is not responsible for unauthorised use, failure to follow safety instructions or violations of applicable law, subject to the foregoing limitations.</li></ul>
+        <h3>11. Privacy and Personal Information</h3>
+        <ul><li>Personal information collected during ordering will be handled in accordance with the website&#x27;s Privacy Policy and applicable data protection laws.</li><li>Customer information will be used for legitimate purposes such as order processing, payment verification, customer support and legally required record-keeping.</li><li>Customers should review the Privacy Policy before placing an order.</li></ul>
+        <h3>12. Changes to These Terms</h3>
+        <p>We may update these Terms and Conditions from time to time to reflect changes in our operations, products or applicable laws. The revised version will be published on the website with an updated date. Changes will apply as permitted by law.</p>
+        <h3>13. Governing Law and Disputes</h3>
+        <p>These Terms and Conditions are governed by the laws of India. Disputes will be addressed by the competent courts or authorities having jurisdiction under applicable law.</p>
+        <h3>14. Contact Information</h3>
+        <ul><li>Store name: Patakapreneurs</li><li>Phone: Vinish - +91 90252 00579 · Varan - +91 96527 13674 · Samarth - +91 97405 11988</li></ul>
+        <h3>Customer Acknowledgement</h3><p>By selecting the acceptance checkbox and proceeding with an order, you confirm that you have read and agreed to these Terms and Conditions and understand that the purchase of a firecracker does not override any applicable legal, safety or campus restrictions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product photo viewer -->
+  <div id="modal-photo" class="modal hidden info-modal" role="dialog" aria-modal="true" aria-label="Product photo">
+    <div class="modal-box photo-box">
+      <button type="button" class="close" data-close aria-label="Close">✕</button>
+      <img id="photo-big" alt="">
+      <p id="photo-caption"></p>
+    </div>
+  </div>
+
+  <!-- Checkout -->
+  <div id="modal-checkout" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="co-title">
+    <div class="modal-box">
+      <button type="button" class="close" data-close aria-label="Close">✕</button>
+      <h2 id="co-title">Checkout</h2>
+      <div class="steps" aria-hidden="true"><span id="dot1" class="dot active">1 · Your details</span><span id="dot2" class="dot">2 · Pay &amp; upload</span></div>
+
+      <!-- Step 1: details (nothing here is mandatory) -->
+      <form id="step1" autocomplete="on">
+        <label for="ctype">I am a</label>
+        <select id="ctype" name="ctype">
+          <option value="">Select</option>
+          <option value="faculty">Faculty</option>
+          <option value="guest">Guest</option>
+        </select>
+
+        <label for="name">Name</label>
+        <input id="name" name="name" maxlength="60" autocomplete="name">
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[6-9][0-9]{9}" maxlength="10" title="Enter a valid 10-digit mobile number" autocomplete="tel-national">
+
+        <label for="delivery">Delivery option</label>
+        <select id="delivery" name="delivery">
+          <option value="">Select delivery option</option>
+          <option value="college">College - delivered on Friday to cabin</option>
+          <option value="home">Delivered to home</option>
+        </select>
+
+        <!-- 1. College delivery -->
+        <div id="fields-college" class="hidden">
+          <label for="cabin">Cabin number</label>
+          <input id="cabin" name="cabin" maxlength="30" autocomplete="off">
+        </div>
+
+        <!-- 2. Home delivery -->
+        <div id="fields-home" class="hidden">
+          <label for="address">Delivery address</label>
+          <textarea id="address" name="address" rows="3" maxlength="300" autocomplete="street-address"></textarea>
+
+          <label for="mapLink">Map location link</label>
+          <input id="mapLink" name="mapLink" inputmode="url" maxlength="300" placeholder="Paste Google Maps link" autocomplete="off">
+          <p class="hint">In Google Maps, tap Share and copy the link.</p>
+          <p class="fee-note">A delivery fee of ₹<span class="fee-amt"></span> will be added to your total.</p>
+        </div>
+
+        <button type="submit" class="btn-checkout full">Next: Payment →</button>
+      </form>
+
+      <!-- Step 2: pay + upload -->
+      <form id="order-form" class="hidden">
+        <div class="summary">
+          <ul id="order-lines"></ul>
+          <div class="sum-row" id="row-mrp"><span>Original price</span><s id="sum-mrp"></s></div>
+          <div class="sum-row save" id="row-save"><span>You save</span><span id="sum-save"></span></div>
+          <div class="sum-row hidden" id="row-fee"><span>Delivery fee</span><span id="sum-fee"></span></div>
+          <div class="sum-row grand"><span>Amount to pay</span><strong id="sum-total"></strong></div>
+        </div>
+
+        <fieldset class="pay-choices">
+          <legend>Choose who to pay (any one)</legend>
+          <div id="pay-options"></div>
+        </fieldset>
+        <div id="qr-panel" class="qr-panel hidden">
+          <img id="qr-img" alt="">
+          <p class="pay-amount">Pay exactly <b id="qr-amount"></b></p>
+          <p class="upi-line">UPI ID: <strong id="qr-upi"></strong> <button type="button" id="copy-upi" class="mini-btn">Copy</button></p>
+        </div>
+
+        <label for="utr">UTR / UPI transaction ID</label>
+        <input id="utr" name="utr" pattern="[A-Za-z0-9]{8,30}" maxlength="30" title="Letters and numbers only, at least 8 characters" autocomplete="off">
+        <p class="hint">You'll find this in your payment app after paying (usually 12 digits).</p>
+
+        <label class="check"><input type="checkbox" id="agree">
+          <span>I have read and agree to the <button type="button" class="link-btn" data-open="modal-terms">Terms and Conditions</button>.</span></label>
+
+        <p id="submit-error" class="error hidden" role="alert"></p>
+        <div class="btn-row">
+          <button type="button" id="back-btn" class="btn-ghost">← Back</button>
+          <button type="submit" class="btn-checkout grow" id="place-btn">Place Order</button>
+        </div>
+      </form>
+
+      <!-- Step 3: done -->
+      <div id="step3" class="hidden done">
+        <div class="done-icon">✅</div>
+        <h3>Order placed!</h3>
+        <p>Your order ID is <strong id="done-id"></strong>. Please save it.</p>
+        <p>We'll verify your payment and confirm your order on the phone number you gave us.</p>
+        <button type="button" class="btn-checkout full" data-close>Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
