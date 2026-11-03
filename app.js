@@ -300,7 +300,7 @@ $("copy-upi").addEventListener("click", async e => {
 });
 
 // ---- place the order ----
-// Order ID = first letter of the buyer's name + 3 random digits + tag, e.g. V472-FAC (FAC = faculty, GST = guest)
+// Order ID = first letter of the buyer's name + 3 random digits + tag, e.g. V472-FAC (FA = faculty, GST = guest)
 function newOrderId(name, tag) {
   const letter = ((name || "").match(/[A-Za-z]/) || ["X"])[0].toUpperCase();
   const bytes = window.crypto && crypto.getRandomValues ? crypto.getRandomValues(new Uint8Array(3)) : null;
