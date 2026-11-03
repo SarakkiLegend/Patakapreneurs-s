@@ -1,7 +1,7 @@
 // ============================================================
 // 1. SETTINGS
 // ============================================================
-const SCRIPT_URL = "PASTE_YOUR_NEW_WEB_APP_URL_HERE"; // must end in /exec (deploy the new Code.gs and paste its URL)
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwZ2T6yi5BACWKGV3jSDNV9inBWlyCPiJYt0orQbtv6rbcWAeyjFqOUlrjIfns_quzl/exec"; // must end in /exec (deploy the new Code.gs and paste its URL)
 const DELIVERY_FEE = 250;   // added automatically when "Delivered to home" is chosen
 
 // The three QR codes customers can choose from
