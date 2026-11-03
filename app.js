@@ -27,7 +27,7 @@ let currentStep = 1;
 // ============================================================
 // 3. PRODUCT LIST (Recommendations first, then categories)
 // ============================================================
-const IMG_EXT = ["jpg", "jpeg", "png", "webp"];   // photo file types we try, in this order
+const IMG_EXT = ["jpg.jpeg", "jpg", "jpeg", "png", "webp"];   // photo file types we try, in this order
 
 // If a photo is missing, try the next file type; after the last one show a plain placeholder
 function imgFail(img) {
